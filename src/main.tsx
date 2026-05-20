@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom'
 // @ts-ignore: side-effect import for global CSS
 import './styles/fonts.css'
 // @ts-ignore: side-effect import for global CSS
@@ -8,8 +8,9 @@ import './styles/theme.css'
 import './index.css'
 import App from './app/App.tsx'
 
-createRoot(document.getElementById('root')!).render(
+ReactDOM.render(
   <StrictMode>
     <App />
   </StrictMode>,
+  document.getElementById('root'),
 )
